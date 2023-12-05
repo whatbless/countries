@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/buildings/static/css/main.44aa998f.css",
+    "main.js": "/buildings/static/js/main.d8f7533a.js",
+    "static/js/787.2e1ca5ba.chunk.js": "/buildings/static/js/787.2e1ca5ba.chunk.js",
+    "static/media/hero2.mp4": "/buildings/static/media/hero2.ed0bb5c53301d136c1b0.mp4",
+    "static/media/diploma.png": "/buildings/static/media/diploma.6bccd013245b931a9088.png",
+    "static/media/first-image1.png": "/buildings/static/media/first-image1.771ff43b4a429bce3e7f.png",
+    "static/media/second-image1.png": "/buildings/static/media/second-image1.204387248d774f188d2d.png",
+    "static/media/third-image1.png": "/buildings/static/media/third-image1.6dd695d787953ea406a6.png",
+    "static/media/fourth-image1.png": "/buildings/static/media/fourth-image1.cbe4594c7322ec8bb511.png",
+    "static/media/real.jpeg": "/buildings/static/media/real.145a7fe91721fd49db6f.jpeg",
+    "static/media/instagram.png": "/buildings/static/media/instagram.80e598d8df0c0a94d580.png",
+    "static/media/whatsapp.png": "/buildings/static/media/whatsapp.807cf0d84060a9ee2059.png",
+    "static/media/hero-image.jpeg": "/buildings/static/media/hero-image.3b963ff96ff770446112.jpeg",
+    "static/media/properties.png": "/buildings/static/media/properties.5ab66617b03b3ca29260.png",
+    "static/media/item1.jpeg": "/buildings/static/media/item1.c79e6485b49072de90ae.jpeg",
+    "static/media/vert-logo.png": "/buildings/static/media/vert-logo.711eb23362ee10fed72e.png",
+    "static/media/henry-like.png": "/buildings/static/media/henry-like.202c7d12eb5aae59edd2.png",
+    "static/media/logo1.png": "/buildings/static/media/logo1.d2e9c194134d16899526.png",
+    "static/media/henry-o.png": "/buildings/static/media/henry-o.352a97a277511c440542.png",
+    "static/media/henry-hi.png": "/buildings/static/media/henry-hi.7d9dbca9d936c69f1d1b.png",
+    "static/media/henry-v.png": "/buildings/static/media/henry-v.d39b25a3391928c50813.png",
+    "static/media/henry-think.png": "/buildings/static/media/henry-think.ef4438c802e198e9e4a1.png",
+    "static/media/henry-hand.png": "/buildings/static/media/henry-hand.9e31fb598b6448d43987.png",
+    "static/media/henry-eye.png": "/buildings/static/media/henry-eye.e7fbcf5babe2b8758f5d.png",
+    "static/media/henry-party.png": "/buildings/static/media/henry-party.3401e4a44a31e1526735.png",
+    "static/media/henry-love.png": "/buildings/static/media/henry-love.43ac9ad69c4856a04ada.png",
+    "static/media/henry-grin.png": "/buildings/static/media/henry-grin.dcffd0a95c8538b0eb67.png",
+    "static/media/henry-heart.png": "/buildings/static/media/henry-heart.1d35d181b9f7acdab5af.png",
+    "index.html": "/buildings/index.html",
+    "main.44aa998f.css.map": "/buildings/static/css/main.44aa998f.css.map",
+    "main.d8f7533a.js.map": "/buildings/static/js/main.d8f7533a.js.map",
+    "787.2e1ca5ba.chunk.js.map": "/buildings/static/js/787.2e1ca5ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.44aa998f.css",
+    "static/js/main.d8f7533a.js"
+  ]
+}
