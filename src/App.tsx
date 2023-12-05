@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
-import Carousel from "./components/carousel/Carousel";
-import Feedback from "./components/feedback/Feedback";
 import Hero from "./components/hero/Hero";
 import Interlayer from "./components/interlayer/Interlayer";
-import Question from "./components/question/Question";
-import About from "./components/about/About";
-import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./anims.css";
 import logo1 from "./images/logo1.png";
+import Navs from "./components/navs/Navs";
+import { Route, Routes } from "react-router-dom";
+//@ts-ignore
+import Portugal from "./countries/Portugal";
+import Argentina from "./countries/Argentina";
+import France from "./countries/France";
+import Italy from "./countries/Italy";
+import UK from "./countries/UK";
+import Spain from "./countries/Spain";
 
 function App() {
   const [scroll, setScroll] = React.useState(0);
@@ -71,13 +75,24 @@ function App() {
         </a>
       )}
       <div>
-        <Hero />
-        <Interlayer />
-        <Carousel />
-        <Feedback />
-        <About />
-        <Question />
-        <Footer />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div>
+                <Hero />
+                <Interlayer />
+                <Navs />
+              </div>
+            }
+          />
+          <Route path="/portugal" element={<Portugal />} />
+          <Route path="/argentina" element={<Argentina />} />
+          <Route path="/france" element={<France />} />
+          <Route path="/italy" element={<Italy />} />
+          <Route path="/uk" element={<UK />} />
+          <Route path="/spain" element={<Spain />} />
+        </Routes>
       </div>
     </div>
   );
