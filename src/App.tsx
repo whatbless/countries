@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import Hero from "./components/hero/Hero";
 import Interlayer from "./components/interlayer/Interlayer";
 import Header from "./components/header/Header";
+import Header1 from "./components/header/Header1";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./anims.css";
 import logo1 from "./images/logo1.png";
-import Navs from "./components/navs/Navs";
 import { Route, Routes } from "react-router-dom";
 //@ts-ignore
 import Portugal from "./countries/Portugal";
@@ -51,20 +51,6 @@ function App() {
   }, []);
   return (
     <div className="relative">
-      {isMobile ? (
-        scroll > 200 ? (
-          <div id="header">
-            <Header />
-          </div>
-        ) : (
-          <div className="absolute top-5 right-5">
-            <img className="w-20" src={logo1} alt="logo1"></img>
-          </div>
-        )
-      ) : (
-        <Header />
-      )}
-
       {scroll > 900 && (
         <a
           href="#hero"
@@ -80,18 +66,150 @@ function App() {
             path="/"
             element={
               <div>
+                {isMobile ? (
+                  scroll > 200 ? (
+                    <div id="header">
+                      <Header1 />
+                    </div>
+                  ) : (
+                    <div className="absolute top-5 right-5">
+                      <img className="w-20" src={logo1} alt="logo1"></img>
+                    </div>
+                  )
+                ) : (
+                  <Header1 />
+                )}
                 <Hero />
                 <Interlayer />
-                <Navs />
               </div>
             }
           />
-          <Route path="/portugal" element={<Portugal />} />
-          <Route path="/argentina" element={<Argentina />} />
-          <Route path="/france" element={<France />} />
-          <Route path="/italy" element={<Italy />} />
-          <Route path="/uk" element={<UK />} />
-          <Route path="/spain" element={<Spain />} />
+          <Route
+            path="/portugal"
+            element={
+              <div>
+                {isMobile ? (
+                  scroll > 200 ? (
+                    <div id="header">
+                      <Header />
+                    </div>
+                  ) : (
+                    <div className="absolute top-5 right-5">
+                      <img className="w-20" src={logo1} alt="logo1"></img>
+                    </div>
+                  )
+                ) : (
+                  <Header />
+                )}
+                <Portugal />
+              </div>
+            }
+          />
+          <Route
+            path="/argentina"
+            element={
+              <div>
+                {isMobile ? (
+                  scroll > 200 ? (
+                    <div id="header">
+                      <Header />
+                    </div>
+                  ) : (
+                    <div className="absolute top-5 right-5">
+                      <img className="w-20" src={logo1} alt="logo1"></img>
+                    </div>
+                  )
+                ) : (
+                  <Header />
+                )}
+                <Argentina />
+              </div>
+            }
+          />
+          <Route
+            path="/france"
+            element={
+              <div>
+                {isMobile ? (
+                  scroll > 200 ? (
+                    <div id="header">
+                      <Header />
+                    </div>
+                  ) : (
+                    <div className="absolute top-5 right-5">
+                      <img className="w-20" src={logo1} alt="logo1"></img>
+                    </div>
+                  )
+                ) : (
+                  <Header />
+                )}
+                <France />
+              </div>
+            }
+          />
+          <Route
+            path="/italy"
+            element={
+              <div>
+                {isMobile ? (
+                  scroll > 200 ? (
+                    <div id="header">
+                      <Header />
+                    </div>
+                  ) : (
+                    <div className="absolute top-5 right-5">
+                      <img className="w-20" src={logo1} alt="logo1"></img>
+                    </div>
+                  )
+                ) : (
+                  <Header />
+                )}
+                <Italy />
+              </div>
+            }
+          />
+          <Route
+            path="/uk"
+            element={
+              <div>
+                {isMobile ? (
+                  scroll > 200 ? (
+                    <div id="header">
+                      <Header />
+                    </div>
+                  ) : (
+                    <div className="absolute top-5 right-5">
+                      <img className="w-20" src={logo1} alt="logo1"></img>
+                    </div>
+                  )
+                ) : (
+                  <Header />
+                )}
+                <UK />
+              </div>
+            }
+          />
+          <Route
+            path="/spain"
+            element={
+              <div>
+                {isMobile ? (
+                  scroll > 200 ? (
+                    <div id="header">
+                      <Header />
+                    </div>
+                  ) : (
+                    <div className="absolute top-5 right-5">
+                      <img className="w-20" src={logo1} alt="logo1"></img>
+                    </div>
+                  )
+                ) : (
+                  <Header />
+                )}
+                <Spain />
+              </div>
+            }
+          />
         </Routes>
       </div>
     </div>

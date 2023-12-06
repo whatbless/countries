@@ -6,6 +6,9 @@ import Hero from "../components/hero/Hero";
 import Interlayer from "../components/interlayer/Interlayer";
 import Question from "../components/question/Question";
 import Footer from "../components/footer/Footer";
+import Content from "../components/content/Content";
+import Feedback1 from "../components/feedback/Feedback1";
+import Line from "../components/line/Line";
 
 const Italy = () => {
   return (
@@ -14,8 +17,10 @@ const Italy = () => {
       <Interlayer />
       <Carousel />
       <Feedback />
+      <Content />
       <About />
-      <Question />
+      <Feedback1 />
+      <Line />
       <Footer />
     </div>
   );

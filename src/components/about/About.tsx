@@ -9,7 +9,7 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 const About = () => {
   return (
-    <section className="relative py-10">
+    <section className="relative py-10 bg-pastel-grey">
       <div id="about" className="absolute -top-28"></div>
       <div className="container mx-auto px-10">
         <h1 className="md:text-4xl text-3xl w-full text-center pb-10">

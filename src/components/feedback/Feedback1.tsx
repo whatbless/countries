@@ -30,7 +30,7 @@ const variants: Array<propertyTypeVariants> = [
   { var: "להשקעה ומגורים" },
 ];
 
-const Feedback = () => {
+const Feedback1 = () => {
   const [isSended, setIsSended] = useState(false);
   const [showElement, setShowElement] = React.useState(true);
   const dispatch = useDispatch();
@@ -52,21 +52,18 @@ const Feedback = () => {
   };
 
   return (
-    <section className="mb-12 bg-pastel-grey">
+    <section className={styles.wrapper}>
       <div className="container relative mx-auto w-full px-10">
         <div id="feedback" className="absolute -top-36"></div>
         <h1 className="md:text-4xl text-3xl w-full text-center pt-10">
           ?איזה נדל"ן אתם מחפשים
         </h1>
         <div className="flex xl:flex-row flex-col h-max md:pt-10 pt-5">
-          <div className="2xl:w-2/5 xl:w-1/2 lg:w-2/3 mx-auto w-full sm:mb-10 mb-0 px-20">
-            <img src={image} alt="feedback-image" />
-          </div>
           {isSended ? (
             showElement && (
               <div
                 id="send"
-                className="flex flex-col justify-center items-center xl:w-1/2 w-full"
+                className="flex flex-col justify-center items-center w-full"
               >
                 <img src={like} alt="like-henry"></img>
                 <p className="mb-5 md:text-2xl text-xl text-center text-regal-blue">
@@ -90,7 +87,7 @@ const Feedback = () => {
           ) : (
             <div
               id="form"
-              className="xl:w-1/2 w-full flex flex-col xl:text-left text-center items-center"
+              className="w-full flex flex-col xl:text-left text-center items-center"
             >
               <p className="w-full text-2xl sm:pt-0 pt-5">
                 צור קשר! אנא השאר פרטים ונחזור אליך בקדם
@@ -209,4 +206,4 @@ const Feedback = () => {
   );
 };
 
-export default Feedback;
+export default Feedback1;
