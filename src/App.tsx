@@ -63,6 +63,14 @@ function App() {
       <div>
         <Routes>
           <Route
+            path="/countries"
+            element={
+              <div className="absolute px-10 text-5xl py-5 left-1/2 top-1/2">
+                Начать просмотр
+              </div>
+            }
+          />
+          <Route
             path="/"
             element={
               <div>

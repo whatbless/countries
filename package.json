@@ -1,7 +1,7 @@
 {
   "name": "buildings",
   "version": "0.1.0",
-  "homepage": "http://whatbless.github.io/buildings",
+  "homepage": "http://whatbless.github.io/countries",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
