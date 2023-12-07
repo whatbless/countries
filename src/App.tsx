@@ -15,6 +15,7 @@ import France from "./countries/France";
 import Italy from "./countries/Italy";
 import UK from "./countries/UK";
 import Spain from "./countries/Spain";
+import { NavLink } from "react-router-dom";
 
 function App() {
   const [scroll, setScroll] = React.useState(0);
@@ -65,9 +66,12 @@ function App() {
           <Route
             path="/countries"
             element={
-              <div className="absolute px-10 text-5xl py-5 left-1/2 top-1/2">
+              <NavLink
+                to="/"
+                className="absolute px-10 text-5xl py-5 left-1/2 top-1/2 bg-pastel-grey"
+              >
                 Начать просмотр
-              </div>
+              </NavLink>
             }
           />
           <Route
