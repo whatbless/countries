@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/countries/static/css/main.445c3cb2.css",
-    "main.js": "/countries/static/js/main.68ada735.js",
+    "main.css": "/countries/static/css/main.1f32a47c.css",
+    "main.js": "/countries/static/js/main.64e8a24f.js",
     "static/js/787.2e1ca5ba.chunk.js": "/countries/static/js/787.2e1ca5ba.chunk.js",
     "static/media/hero2.mp4": "/countries/static/media/hero2.ed0bb5c53301d136c1b0.mp4",
     "static/media/diploma.png": "/countries/static/media/diploma.6bccd013245b931a9088.png",
     "static/media/first-image1.png": "/countries/static/media/first-image1.771ff43b4a429bce3e7f.png",
     "static/media/second-image1.png": "/countries/static/media/second-image1.204387248d774f188d2d.png",
     "static/media/third-image1.png": "/countries/static/media/third-image1.6dd695d787953ea406a6.png",
+    "static/media/slider1.jpeg": "/countries/static/media/slider1.098aeafe25ecac26aa64.jpeg",
     "static/media/fourth-image1.png": "/countries/static/media/fourth-image1.cbe4594c7322ec8bb511.png",
+    "static/media/slider4.jpeg": "/countries/static/media/slider4.62f6583c53dd49bfb02c.jpeg",
     "static/media/real.jpeg": "/countries/static/media/real.145a7fe91721fd49db6f.jpeg",
+    "static/media/slider2.jpeg": "/countries/static/media/slider2.7b08a1bbb88513ca3e74.jpeg",
+    "static/media/slider3.jpeg": "/countries/static/media/slider3.606f906d6fc348b497ea.jpeg",
     "static/media/instagram.png": "/countries/static/media/instagram.80e598d8df0c0a94d580.png",
     "static/media/whatsapp.png": "/countries/static/media/whatsapp.807cf0d84060a9ee2059.png",
     "static/media/hero-image.jpeg": "/countries/static/media/hero-image.3b963ff96ff770446112.jpeg",
@@ -29,12 +33,12 @@
     "static/media/henry-grin.png": "/countries/static/media/henry-grin.dcffd0a95c8538b0eb67.png",
     "static/media/henry-heart.png": "/countries/static/media/henry-heart.1d35d181b9f7acdab5af.png",
     "index.html": "/countries/index.html",
-    "main.445c3cb2.css.map": "/countries/static/css/main.445c3cb2.css.map",
-    "main.68ada735.js.map": "/countries/static/js/main.68ada735.js.map",
+    "main.1f32a47c.css.map": "/countries/static/css/main.1f32a47c.css.map",
+    "main.64e8a24f.js.map": "/countries/static/js/main.64e8a24f.js.map",
     "787.2e1ca5ba.chunk.js.map": "/countries/static/js/787.2e1ca5ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.445c3cb2.css",
-    "static/js/main.68ada735.js"
+    "static/css/main.1f32a47c.css",
+    "static/js/main.64e8a24f.js"
   ]
 }
