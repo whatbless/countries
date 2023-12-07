@@ -6,6 +6,8 @@ import facebook from "./../../images/facebook.png";
 import instagram from "./../../images/instagram.png";
 import whatsapp from "./../../images/whatsapp.png";
 import { SocialType } from "../../types/types";
+import Popup from "reactjs-popup";
+import { NavLink } from "react-router-dom";
 
 const navs = [
   { title: "עמוד הבית", anchor: "#hero" },
@@ -13,6 +15,15 @@ const navs = [
   { title: "מי אנחנו", anchor: "#about" },
   { title: "קבל ייעוץ", anchor: "#question" },
   { title: "צור קשר", anchor: "#about" },
+];
+
+const options = [
+  { value: "/portugal", label: "Португалия" },
+  { value: "/argentina", label: "Аргентина" },
+  { value: "/france", label: "Франция" },
+  { value: "/italy", label: "Италия" },
+  { value: "/spain", label: "Испания" },
+  { value: "/uk", label: "Великобритания" },
 ];
 
 const socials: Array<SocialType> = [
@@ -108,6 +119,42 @@ const Header = () => {
                 </a>
               </li>
             ))}
+            <li
+              className={
+                scroll < 200 ? "drop-shadow-5xl xl:mb-0 mb-3" : "xl:mb-0 mb-3"
+              }
+            >
+              <Popup
+                position="bottom center"
+                trigger={
+                  <h1
+                    className={
+                      scroll < 200
+                        ? "mx-3.5 font-bold px-2.5 py-1 2xl:text-xl text-lg rounded-none uppercase cursor-pointer drop-shadow-5xl text-white"
+                        : "mx-3.5 font-bold px-2.5 2xl:text-xl text-lg py-1 rounded-none uppercase cursor-pointer text-regal-red"
+                    }
+                  >
+                    Выберите страну
+                  </h1>
+                }
+                on="hover"
+                closeOnDocumentClick
+                mouseLeaveDelay={300}
+                mouseEnterDelay={0}
+                arrow={false}
+              >
+                <div className="flex flex-col space-y-1">
+                  {options.map((option) => (
+                    <NavLink
+                      className="px-3 py-2 hover:bg-regal-blue hover:text-white"
+                      to={option.value}
+                    >
+                      {option.label}
+                    </NavLink>
+                  ))}
+                </div>
+              </Popup>
+            </li>
           </div>
           <div className="flex flex-row xl:mb-0 mb-3 items-center">
             {socials.map((social: SocialType) => (

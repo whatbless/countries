@@ -100,19 +100,7 @@ function App() {
             path="/portugal"
             element={
               <div>
-                {isMobile ? (
-                  scroll > 200 ? (
-                    <div id="header">
-                      <Header />
-                    </div>
-                  ) : (
-                    <div className="absolute top-5 right-5">
-                      <img className="w-20" src={logo1} alt="logo1"></img>
-                    </div>
-                  )
-                ) : (
-                  <Header />
-                )}
+                <Header />
                 <Portugal />
               </div>
             }
@@ -121,19 +109,7 @@ function App() {
             path="/argentina"
             element={
               <div>
-                {isMobile ? (
-                  scroll > 200 ? (
-                    <div id="header">
-                      <Header />
-                    </div>
-                  ) : (
-                    <div className="absolute top-5 right-5">
-                      <img className="w-20" src={logo1} alt="logo1"></img>
-                    </div>
-                  )
-                ) : (
-                  <Header />
-                )}
+                <Header />
                 <Argentina />
               </div>
             }
@@ -142,19 +118,7 @@ function App() {
             path="/france"
             element={
               <div>
-                {isMobile ? (
-                  scroll > 200 ? (
-                    <div id="header">
-                      <Header />
-                    </div>
-                  ) : (
-                    <div className="absolute top-5 right-5">
-                      <img className="w-20" src={logo1} alt="logo1"></img>
-                    </div>
-                  )
-                ) : (
-                  <Header />
-                )}
+                <Header />
                 <France />
               </div>
             }
@@ -163,19 +127,7 @@ function App() {
             path="/italy"
             element={
               <div>
-                {isMobile ? (
-                  scroll > 200 ? (
-                    <div id="header">
-                      <Header />
-                    </div>
-                  ) : (
-                    <div className="absolute top-5 right-5">
-                      <img className="w-20" src={logo1} alt="logo1"></img>
-                    </div>
-                  )
-                ) : (
-                  <Header />
-                )}
+                <Header />
                 <Italy />
               </div>
             }
@@ -184,19 +136,7 @@ function App() {
             path="/uk"
             element={
               <div>
-                {isMobile ? (
-                  scroll > 200 ? (
-                    <div id="header">
-                      <Header />
-                    </div>
-                  ) : (
-                    <div className="absolute top-5 right-5">
-                      <img className="w-20" src={logo1} alt="logo1"></img>
-                    </div>
-                  )
-                ) : (
-                  <Header />
-                )}
+                <Header />
                 <UK />
               </div>
             }
@@ -205,19 +145,7 @@ function App() {
             path="/spain"
             element={
               <div>
-                {isMobile ? (
-                  scroll > 200 ? (
-                    <div id="header">
-                      <Header />
-                    </div>
-                  ) : (
-                    <div className="absolute top-5 right-5">
-                      <img className="w-20" src={logo1} alt="logo1"></img>
-                    </div>
-                  )
-                ) : (
-                  <Header />
-                )}
+                <Header />
                 <Spain />
               </div>
             }

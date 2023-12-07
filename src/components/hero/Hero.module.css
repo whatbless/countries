@@ -36,30 +36,15 @@
 }
 
 .image1,
+.image2,
 .image3,
 .image4,
-.image5 {
-    width: 100%;
-    height: 100%;
+.image5,
+.image6 {
+    width: 100vw;
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: inset 0px 0px 300px 100px rgba(0, 0, 0, 0.5);
-}
-
-.image1 {
-    background-image: url(./../../images/slider1.jpeg);
-}
-
-.image3 {
-    background-image: url(./../../images/slider3.jpeg);
-}
-
-.image4 {
-    background-image: url(./../../images/slider4.jpeg);
-}
-
-.image5 {
-    background-image: url(./../../images/slider5.jpeg);
 }
 
 .header {

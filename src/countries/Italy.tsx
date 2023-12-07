@@ -2,7 +2,7 @@ import React from "react";
 import About from "../components/about/About";
 import Carousel from "../components/carousel/Carousel";
 import Feedback from "../components/feedback/Feedback";
-import Hero from "../components/hero/Hero";
+import Hero1 from "../components/hero/Hero1";
 import Interlayer from "../components/interlayer/Interlayer";
 import Question from "../components/question/Question";
 import Footer from "../components/footer/Footer";
@@ -13,7 +13,7 @@ import Line from "../components/line/Line";
 const Italy = () => {
   return (
     <div>
-      <Hero />
+      <Hero1 />
       <Interlayer />
       <Carousel />
       <Feedback />
