@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import image from "./../../images/slider1.jpeg";
 import LineBlock from "./LineBlock";
 
@@ -27,6 +27,18 @@ const blocks = [
 
 const Line = () => {
   const [scroll, setScroll] = React.useState(0);
+  const [width, setWidth] = useState<number>(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
   const handleScroll = () => {
     setScroll(window.scrollY);
   };
@@ -44,7 +56,23 @@ const Line = () => {
             {blocks.map((block, index: number) => (
               <div
                 className={
-                  scroll < 4430 + index * 480
+                  width >= 1536 && scroll < 4430 + index * 480
+                    ? "absolute px-7 py-5 bg-white  text-regal-red rounded-full duration-200 font-bold"
+                    : 1536 > width &&
+                      width >= 1280 &&
+                      scroll < 4230 + index * 480
+                    ? "absolute px-7 py-5 bg-white  text-regal-red rounded-full duration-200 font-bold"
+                    : 1280 > width &&
+                      width >= 1024 &&
+                      scroll < 5030 + index * 480
+                    ? "absolute px-7 py-5 bg-white  text-regal-red rounded-full duration-200 font-bold"
+                    : 1024 > width &&
+                      width >= 768 &&
+                      scroll < 5430 + index * 480
+                    ? "absolute px-7 py-5 bg-white  text-regal-red rounded-full duration-200 font-bold"
+                    : 768 > width && width >= 640 && scroll < 4430 + index * 480
+                    ? "absolute px-7 py-5 bg-white  text-regal-red rounded-full duration-200 font-bold"
+                    : width < 640 && scroll < 5430 + index * 480
                     ? "absolute px-7 py-5 bg-white  text-regal-red rounded-full duration-200 font-bold"
                     : "absolute px-7 py-5 bg-regal-red  text-white rounded-full duration-200 font-bold"
                 }
@@ -55,7 +83,22 @@ const Line = () => {
             ))}
             <div
               className="w-full rounded-full bg-regal-red"
-              style={{ height: `${scroll - 4200}px` }}
+              style={{
+                height: `${
+                  scroll -
+                  (width >= 1536
+                    ? 4200
+                    : 1536 > width && width >= 1280
+                    ? 4000
+                    : 1280 > width && width >= 1024
+                    ? 4800
+                    : 1024 > width && width >= 768
+                    ? 5200
+                    : 768 >= width && width > 640
+                    ? 5400
+                    : 5200)
+                }px`,
+              }}
             ></div>
           </div>
         </div>
@@ -64,11 +107,27 @@ const Line = () => {
             <div
               className={
                 index % 2 == 0
-                  ? scroll < 4430 + index * 480
+                  ? width > 1536 && scroll < 4430 + index * 480
                     ? "flex justify-start w-full opacity-0 -ml-96 duration-500"
+                    : width > 1280 && scroll < 4430 + index * 480
+                    ? "flex justify-start w-full duration-500 opacity-0 -ml-96"
+                    : width > 1024 && scroll < 4430 + index * 480
+                    ? "flex justify-start w-full duration-500 opacity-0 -ml-96"
+                    : width > 768 && scroll < 4430 + index * 480
+                    ? "flex justify-start w-full duration-500 opacity-0 -ml-96"
+                    : width > 640 && scroll < 4430 + index * 480
+                    ? "flex justify-start w-full duration-500 opacity-0 -ml-96"
                     : "flex justify-start w-full duration-500"
-                  : scroll < 4430 + index * 480
+                  : width > 1536 && scroll < 4430 + index * 480
                   ? "flex justify-end w-full opacity-0 ml-96 duration-500"
+                  : width > 1280 && scroll < 4430 + index * 480
+                  ? "flex justify-end w-full duration-500 opacity-0 ml-96"
+                  : width > 1024 && scroll < 4430 + index * 480
+                  ? "flex justify-end w-full duration-500 opacity-0 ml-96"
+                  : width > 768 && scroll < 4430 + index * 480
+                  ? "flex justify-end w-full duration-500 opacity-0 ml-96"
+                  : width > 640 && scroll < 4430 + index * 480
+                  ? "flex justify-end w-full duration-500 opacity-0 ml-96"
                   : "flex justify-end w-full duration-500"
               }
             >

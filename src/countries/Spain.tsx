@@ -9,6 +9,7 @@ import Footer from "../components/footer/Footer";
 import Content from "../components/content/Content";
 import Feedback1 from "../components/feedback/Feedback1";
 import Line from "../components/line/Line";
+import Ender from "../components/ender/Ender";
 
 const Spain = () => {
   return (
@@ -21,6 +22,7 @@ const Spain = () => {
       <About />
       <Feedback1 />
       <Line />
+      <Ender />
       <Footer />
     </div>
   );
