@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "react-alice-carousel/lib/alice-carousel.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.slider {
+  max-width: 100%;
+  margin: auto;
+}
+
+.slider-track {
+  top: 8px;
+  height: 4px;
+  background: linear-gradient(90deg, #0065cb 0%, #003972 100%);
+}
+
+.slider-track.slider-track-0 {
+  background: rgb(232, 232, 232);
+}
+
+.slider-track.slider-track-2 {
+  background: rgb(232, 232, 232);
+}
+
+.slider .thumb {
+  width: 25px;
+  height: 25px;
+  cursor: grab;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.305);
+  margin-top: -2px;
+}
+
+.alice-carousel__prev-btn-item {
+  color: #0065cb;
+  font-size: 32px;
+  padding: 0 15px;
+  border-radius: 50%;
+  transition: all 0.2s;
+  border: 2px solid white;
+}
+
+.alice-carousel__next-btn-item {
+  color: #0065cb;
+  font-size: 32px;
+  padding: 0 15px;
+  border-radius: 50%;
+  transition: all 0.2s;
+  border: 2px solid white;
+}
+
+.alice-carousel__next-btn-item:hover {
+  color: #0065cb;
+  border: 2px solid #0065cb;
+}
+
+.alice-carousel__prev-btn-item:hover {
+  color: #0065cb;
+  border: 2px solid #0065cb;
+}
