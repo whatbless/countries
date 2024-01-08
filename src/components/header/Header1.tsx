@@ -21,12 +21,13 @@ const socials: Array<SocialType> = [
 ];
 
 const options = [
-  { value: "/portugal", label: "Португалия" },
-  { value: "/argentina", label: "Аргентина" },
-  { value: "/france", label: "Франция" },
-  { value: "/italy", label: "Италия" },
-  { value: "/spain", label: "Испания" },
-  { value: "/uk", label: "Великобритания" },
+  { value: "/portugal", label: "Portugal" },
+  { value: "/northkipr", label: "SevKipr" },
+  { value: "/kipr", label: "Kipr" },
+  { value: "/tailand", label: "Tailand" },
+  { value: "/montenegro", label: "Montenegro" },
+  { value: "/greece", label: "Greece" },
+  { value: "/spain", label: "Spain" },
 ];
 
 const Header1 = () => {
@@ -98,7 +99,7 @@ const Header1 = () => {
               position="bottom center"
               trigger={
                 <h1 className="font-bold 2xl:text-xl text-lg rounded-none uppercase cursor-pointer drop-shadow-5xl text-white">
-                  Выберите страну
+                  בחר מדינה
                 </h1>
               }
               on="hover"

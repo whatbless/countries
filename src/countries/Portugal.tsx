@@ -5,21 +5,18 @@ import Feedback from "../components/feedback/Feedback";
 import Hero1 from "../components/hero/Hero1";
 import Interlayer from "../components/interlayer/Interlayer";
 import Footer from "../components/footer/Footer";
-import Content from "../components/content/Content";
-import Feedback1 from "../components/feedback/Feedback1";
+import Content from "../components/content/ContentPortugal";
 import Line from "../components/line/Line";
-import slider1 from "./../images/slider1.jpeg";
-import slider2 from "./../images/slider2.jpeg";
-import slider3 from "./../images/slider3.jpeg";
-import slider4 from "./../images/slider4.jpeg";
-import Ender from "../components/ender/Ender";
-// 
-import {countryProps} from '../types/types';
-// 
+import slider1 from "./../images/portugal/slider-image1.jpg";
+import slider2 from "./../images/portugal/slider-image2.jpg";
+import slider3 from "./../images/portugal/slider-image3.jpg";
+import slider4 from "./../images/portugal/slider-image4.jpg";
+import Question from "../components/question/Question";
+//
+import { countryProps } from "../types/types";
+//
 
 const Portugal = (props: countryProps) => {
-  console.log(props.code);
-  
   return (
     <div>
       <Hero1
@@ -27,16 +24,15 @@ const Portugal = (props: countryProps) => {
         slider2={slider2}
         slider3={slider3}
         slider4={slider4}
-        text="Пройдите краткий опрос и получите персональную консультацию по выбору лучшей недвижимости в израиле!"
+        text="Португалия"
       />
       <Interlayer />
-      <Carousel code={props.code} />
-      <Feedback />
       <Content />
-      <About />
-      <Feedback1 />
+      <Carousel code={props.code} />
       <Line />
-      <Ender />
+      <Feedback />
+      <About />
+      <Question />
       <Footer />
     </div>
   );

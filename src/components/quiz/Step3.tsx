@@ -39,7 +39,6 @@ const SecondStep = () => {
           propertyType: [],
         }}
         onSubmit={(values: any) => {
-          console.log(values);
           dispatch<any>(setPropertyType(values.propertyType));
           dispatch<any>(setStep(4));
         }}

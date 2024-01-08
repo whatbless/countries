@@ -10,10 +10,11 @@ import logo1 from "./images/logo1.png";
 import { Route, Routes } from "react-router-dom";
 //@ts-ignore
 import Portugal from "./countries/Portugal";
-import Argentina from "./countries/Argentina";
-import France from "./countries/France";
-import Italy from "./countries/Italy";
-import UK from "./countries/UK";
+import SevKipr from "./countries/SevKipr";
+import Kipr from "./countries/Kipr";
+import Greece from "./countries/Greece";
+import Tailand from "./countries/Thailand";
+import Montenegro from "./countries/Montenegro";
 import Spain from "./countries/Spain";
 import { NavLink } from "react-router-dom";
 
@@ -106,38 +107,47 @@ function App() {
             }
           />
           <Route
-            path="/argentina"
+            path="/northkipr"
             element={
               <div>
                 <Header />
-                <Argentina code="ar" />
+                <SevKipr code="ncy" />
               </div>
             }
           />
           <Route
-            path="/france"
+            path="/kipr"
             element={
               <div>
                 <Header />
-                <France code="fr" />
+                <Kipr code="cy" />
               </div>
             }
           />
           <Route
-            path="/italy"
+            path="/greece"
             element={
               <div>
                 <Header />
-                <Italy code="it" />
+                <Greece code="gr" />
               </div>
             }
           />
           <Route
-            path="/uk"
+            path="/montenegro"
             element={
               <div>
                 <Header />
-                <UK code="gb" />
+                <Montenegro code="mtng" />
+              </div>
+            }
+          />
+          <Route
+            path="/tailand"
+            element={
+              <div>
+                <Header />
+                <Tailand code="th" />
               </div>
             }
           />

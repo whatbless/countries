@@ -4,27 +4,37 @@ import Carousel from "../components/carousel/Carousel";
 import Feedback from "../components/feedback/Feedback";
 import Hero1 from "../components/hero/Hero1";
 import Interlayer from "../components/interlayer/Interlayer";
-import Question from "../components/question/Question";
 import Footer from "../components/footer/Footer";
-import Content from "../components/content/Content";
-import Feedback1 from "../components/feedback/Feedback1";
+import Content from "../components/content/ContentSpain";
 import Line from "../components/line/Line";
-import Ender from "../components/ender/Ender";
-
-import {countryProps} from "../types/types";
+import slider1 from "./../images/spain/slider-image1.jpg";
+import slider2 from "./../images/spain/slider-image2.jpg";
+import slider3 from "./../images/spain/slider-image3.jpg";
+import slider4 from "./../images/spain/slider-image4.jpg";
+import slider5 from "./../images/spain/slider-image5.jpg";
+import Question from "../components/question/Question";
+//
+import { countryProps } from "../types/types";
+//
 
 const Spain = (props: countryProps) => {
   return (
     <div>
-      <Hero1 />
+      <Hero1
+        slider1={slider1}
+        slider2={slider2}
+        slider3={slider3}
+        slider4={slider4}
+        slider5={slider5}
+        text="Испания"
+      />
       <Interlayer />
-      <Carousel code={props.code}/>
-      <Feedback />
       <Content />
-      <About />
-      <Feedback1 />
+      <Carousel code={props.code} />
       <Line />
-      <Ender />
+      <Feedback />
+      <About />
+      <Question />
       <Footer />
     </div>
   );

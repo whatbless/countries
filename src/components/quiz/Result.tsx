@@ -113,7 +113,7 @@ const Result = () => {
               <button
                 className={styles.backButton}
                 onClick={() => {
-                  dispatch<any>(setStep(6));
+                  dispatch<any>(setStep(5));
                 }}
               >
                 <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />

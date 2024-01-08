@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Formik, Form, Field } from "formik";
 import styles from "./Feedback.module.css";
 import image from "./../../images/properties.png";
@@ -11,6 +11,7 @@ import {
   setName,
   setNumber,
   setPropertyFor,
+  setCountry,
 } from "../../redux/quizReducer";
 import { useSelector } from "react-redux";
 import emailjs from "@emailjs/browser";
@@ -52,15 +53,15 @@ const Feedback = () => {
   };
 
   return (
-    <section className="mb-12 bg-pastel-grey">
+    <section className="pb-10 bg-pastel-grey">
       <div className="container relative mx-auto w-full px-10">
         <div id="feedback" className="absolute -top-36"></div>
         <h1 className="md:text-4xl text-3xl w-full text-center pt-10">
           ?איזה נדל"ן אתם מחפשים
         </h1>
         <div className="flex xl:flex-row flex-col h-max md:pt-10 pt-5">
-          <div className="2xl:w-2/5 xl:w-1/2 lg:w-2/3 mx-auto w-full sm:mb-10 mb-0 px-20">
-            <img src={image} alt="feedback-image" />
+          <div className="2xl:w-[45%] xl:w-3/5 lg:w-2/3 mx-auto w-full sm:mb-10 mb-0 px-20">
+            <img src={image} alt="feedback-imag" />
           </div>
           {isSended ? (
             showElement && (
@@ -101,6 +102,7 @@ const Feedback = () => {
                   number: "",
                   purpose: "",
                   addition: "",
+                  country: "",
                 }}
                 onSubmit={(values: any) => {
                   setIsSended(true);
@@ -109,6 +111,7 @@ const Feedback = () => {
                   dispatch(setNumber(values.number));
                   dispatch(setPropertyFor(values.purpose));
                   dispatch(setAddition(values.addition));
+                  dispatch(setCountry(values.country));
                 }}
               >
                 {({ errors, touched, isValidating }) => (
@@ -140,6 +143,21 @@ const Feedback = () => {
                       <div className={styles.error}>
                         {errors.number && touched.number && (
                           <div>{errors.number}</div>
+                        )}
+                      </div>
+                    </div>
+                    <div className={styles.formBlock}>
+                      <div className={styles.inputWrapper}>
+                        <Field
+                          className={styles.input}
+                          name="country"
+                          validate={requireValidate}
+                          placeholder="מה מדינה, בו היית רוצה לרכוש נכס"
+                        />
+                      </div>
+                      <div className={styles.error}>
+                        {errors.country && touched.country && (
+                          <div>{errors.country}</div>
                         )}
                       </div>
                     </div>

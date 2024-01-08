@@ -12,7 +12,7 @@ import { QuizPropsType } from "../../types/types";
 const Sender = (props: QuizPropsType) => {
   const dispatch = useDispatch();
   const data = useSelector((state: RootState) => state.quiz);
-  const message = `regions: ${data.regions}, propertyType: ${data.propertyType}, propertyFor: ${data.propertyFor}, price: ${data.price}, floor range: ${data.floorRange}, name: ${data.name}, email: ${data.email}, number: ${data.number}, validations: ${data.validations}, addition: ${data.addition}`;
+  const message = `regions: ${data.regions}, propertyType: ${data.propertyType}, propertyFor: ${data.propertyFor}, price: ${data.price}, moneyType: ${data.moneyType} floor range: ${data.floorRange}, name: ${data.name}, email: ${data.email}, number: ${data.number}, validations: ${data.validations}, addition: ${data.addition}`;
 
   const sendEmail = (e: any) => {
     e.preventDefault();
@@ -47,7 +47,7 @@ const Sender = (props: QuizPropsType) => {
         <button
           className={styles.button}
           type="submit"
-          onClick={props.closeModal}
+          onClick={() => dispatch(setStep(10))}
         >
           שלח
           <FontAwesomeIcon className="ml-3" icon={faArrowRight} />

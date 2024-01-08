@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import { SelectField } from "../../blocks/SelectField";
 import { useDispatch } from "react-redux";
-import ReactSlider from "react-slider";
-import { setStep, setPrice, setValidations } from "../../redux/quizReducer";
+import {
+  setStep,
+  setPrice,
+  setValidations,
+  setMoneyType,
+} from "../../redux/quizReducer";
 import "./../../index.css";
 import styles from "./Quiz.module.css";
 import { Formik, Form, Field } from "formik";
@@ -9,8 +13,41 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import henryV from "./../../images/henry-v.png";
+import shekel from "./../../images/shekel.png";
+import usd from "./../../images/usd.png";
+import euro from "./../../images/euro.png";
 
 const validations = ["חנייה", "מרפסת", "ממד"];
+
+const options = [
+  {
+    value: "shekel",
+    label: (
+      <div className="flex justify-center items-center space-x-2">
+        <img src={shekel} alt="ILS" />
+        <p>ILS</p>
+      </div>
+    ),
+  },
+  {
+    value: "dollar",
+    label: (
+      <div className="flex justify-center items-center space-x-2">
+        <img src={usd} alt="USD" />
+        <p>USD</p>
+      </div>
+    ),
+  },
+  {
+    value: "euro",
+    label: (
+      <div className="flex justify-center items-center space-x-2">
+        <img src={euro} alt="EUR" />
+        <p>EUR</p>
+      </div>
+    ),
+  },
+];
 
 function validateNumber(value: string) {
   let error;
@@ -30,33 +67,43 @@ const FourthStep = () => {
           vals: [],
           minPrice: "",
           maxPrice: "",
+          moneyType: "shekel",
         }}
         onSubmit={(values: any) => {
-          console.log(values);
           dispatch<any>(setPrice([values.minPrice, values.maxPrice]));
           dispatch<any>(setValidations(values.vals));
-          dispatch<any>(setStep(6));
+          dispatch<any>(setMoneyType(values.moneyType));
+          dispatch<any>(setStep(7));
         }}
       >
         {({ errors, touched, isValidating }) => (
           <Form>
             <div className="flex flex-col">
               <h1 className="text-center text-lg mb-5">תקציב</h1>
-              <div className={styles.priceWrap}>
-                <div className={styles.formPriceWrapper}>
-                  <p className={styles.formPriceTitle}>מ</p>
-                  <Field
-                    className={styles.formPrice}
-                    name="minPrice"
-                    validate={validateNumber}
-                  />
+              <div>
+                <div className={styles.priceWrap}>
+                  <div className={styles.formPriceWrapper}>
+                    <p className={styles.formPriceTitle}>מ</p>
+                    <Field
+                      className={styles.formPrice}
+                      name="minPrice"
+                      validate={validateNumber}
+                    />
+                  </div>
+                  <div className={styles.formPriceWrapper}>
+                    <p className={styles.formPriceTitle}>עד</p>
+                    <Field
+                      className={styles.formPrice}
+                      name="maxPrice"
+                      validate={validateNumber}
+                    />
+                  </div>
                 </div>
-                <div className={styles.formPriceWrapper}>
-                  <p className={styles.formPriceTitle}>עד</p>
+                <div className="flex justify-center">
                   <Field
-                    className={styles.formPrice}
-                    name="maxPrice"
-                    validate={validateNumber}
+                    name="moneyType"
+                    component={SelectField}
+                    options={options}
                   />
                 </div>
               </div>

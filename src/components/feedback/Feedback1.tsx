@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import styles from "./Feedback.module.css";
-import image from "./../../images/properties.png";
 import like from "./../../images/henry-like.png";
 import { propertyTypeVariants } from "../../types/types";
 import { useDispatch } from "react-redux";
@@ -11,6 +10,7 @@ import {
   setName,
   setNumber,
   setPropertyFor,
+  setCountry,
 } from "../../redux/quizReducer";
 import { useSelector } from "react-redux";
 import emailjs from "@emailjs/browser";
@@ -98,6 +98,7 @@ const Feedback1 = () => {
                   number: "",
                   purpose: "",
                   addition: "",
+                  country: "",
                 }}
                 onSubmit={(values: any) => {
                   setIsSended(true);
@@ -106,6 +107,7 @@ const Feedback1 = () => {
                   dispatch(setNumber(values.number));
                   dispatch(setPropertyFor(values.purpose));
                   dispatch(setAddition(values.addition));
+                  dispatch(setCountry(values.country));
                 }}
               >
                 {({ errors, touched, isValidating }) => (
@@ -137,6 +139,21 @@ const Feedback1 = () => {
                       <div className={styles.error}>
                         {errors.number && touched.number && (
                           <div>{errors.number}</div>
+                        )}
+                      </div>
+                    </div>
+                    <div className={styles.formBlock}>
+                      <div className={styles.inputWrapper}>
+                        <Field
+                          className={styles.input}
+                          name="country"
+                          validate={requireValidate}
+                          placeholder="מה מדינה, בו היית רוצה לרכוש נכס"
+                        />
+                      </div>
+                      <div className={styles.error}>
+                        {errors.country && touched.country && (
+                          <div>{errors.country}</div>
                         )}
                       </div>
                     </div>

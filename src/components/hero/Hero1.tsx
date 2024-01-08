@@ -109,16 +109,7 @@ const Hero1 = (props: any) => {
             style={customStyles}
             contentLabel="Modal"
           >
-            <Quiz />
-            <button
-              className="absolute z-20 right-5 top-5"
-              onClick={closeModal}
-            >
-              <FontAwesomeIcon
-                icon={faXmark}
-                className="text-2xl hover:text-regal-red"
-              />
-            </button>
+            <Quiz closeModal={closeModal} />
           </Modal>
         </div>
       </div>

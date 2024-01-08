@@ -47,7 +47,7 @@ body {
   padding: 0 15px;
   border-radius: 50%;
   transition: all 0.2s;
-  border: 2px solid white;
+  border: 2px solid rgb(232, 232, 232);
 }
 
 .alice-carousel__next-btn-item {
@@ -56,7 +56,7 @@ body {
   padding: 0 15px;
   border-radius: 50%;
   transition: all 0.2s;
-  border: 2px solid white;
+  border: 2px solid rgb(232, 232, 232);
 }
 
 .alice-carousel__next-btn-item:hover {
@@ -67,4 +67,17 @@ body {
 .alice-carousel__prev-btn-item:hover {
   color: #0065cb;
   border: 2px solid #0065cb;
+}
+
+.card-desc-wrap {
+  padding: 10px;
+}
+
+.card-desc-wrap p {
+  margin: 0;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

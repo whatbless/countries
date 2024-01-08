@@ -10,6 +10,8 @@ const SET_NAME = "QUIZREDUCER_SET_NAME";
 const SET_NUMBER = "QUIZREDUCER_SET_NUMBER";
 const SET_ADDITION = "QUIZREDUCER_SET_ADDITION";
 const SET_EMAIL = "QUIZREDUCER_SET_EMAIL";
+const SET_MONEY_TYPE = "QUIZREDUCER_SET_MONEY_TYPE";
+const SET_COUNTRY = "QUIZREDUCER_SET_COUNTRY";
 
 let initialState = {
   regions: "",
@@ -24,6 +26,8 @@ let initialState = {
   number: "",
   addition: "",
   email: "",
+  moneyType: "",
+  country: "",
 };
 
 type initialStateType = typeof initialState;
@@ -65,6 +69,12 @@ const quizReducer = (
 
     case SET_EMAIL:
       return { ...state, email: action.email };
+
+    case SET_MONEY_TYPE:
+      return { ...state, moneyType: action.moneyType };
+
+    case SET_COUNTRY:
+      return { ...state, country: action.country };
 
     case SET_VALIDATIONS:
       return {
@@ -117,6 +127,11 @@ export const setEmail = (email: string) => ({
   email,
 });
 
+export const setMoneyType = (moneyType: string) => ({
+  type: SET_MONEY_TYPE,
+  moneyType,
+});
+
 export const setRoomRange = (values: Array<number>) => ({
   type: SET_ROOM_RANGE,
   values,
@@ -130,6 +145,11 @@ export const setFloorRange = (values: Array<number>) => ({
 export const setPrice = (values: Array<number>) => ({
   type: SET_PRICE,
   values,
+});
+
+export const setCountry = (country: string) => ({
+  type: SET_COUNTRY,
+  country,
 });
 
 export const setValidations = (payload: Array<boolean>) => ({

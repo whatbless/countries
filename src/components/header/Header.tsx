@@ -18,12 +18,13 @@ const navs = [
 ];
 
 const options = [
-  { value: "/portugal", label: "Португалия"},
-  { value: "/argentina", label: "Аргентина" },
-  { value: "/france", label: "Франция" },
-  { value: "/italy", label: "Италия" },
-  { value: "/spain", label: "Испания" },
-  { value: "/uk", label: "Великобритания" },
+  { value: "/portugal", label: "Portugal" },
+  { value: "/northkipr", label: "SevKipr" },
+  { value: "/kipr", label: "Kipr" },
+  { value: "/tailand", label: "Tailand" },
+  { value: "/montenegro", label: "Montenegro" },
+  { value: "/greece", label: "Greece" },
+  { value: "/spain", label: "Spain" },
 ];
 
 const socials: Array<SocialType> = [
@@ -40,6 +41,26 @@ const Header = () => {
   const [scroll, setScroll] = React.useState(0);
   const [width, setWidth] = useState<number>(window.innerWidth);
   const [height, setHeight] = useState<number>(window.innerHeight);
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (window.scrollY > lastScrollY) {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+
+    setLastScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, [lastScrollY]);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
@@ -78,8 +99,10 @@ const Header = () => {
         scroll < 200
           ? menuOpen
             ? "text-regal-blue z-40 fixed w-full flex justify-center duration-500 backdrop-blur-sm"
-            : "text-regal-blue z-40 fixed w-full flex justify-center duration-500"
-          : "text-regal-blue z-40 fixed w-full flex justify-center bg-white duration-500"
+            : "text-regal-blue z-40 fixed w-full flex justify-center duration-500 "
+          : show
+          ? "text-regal-blue z-40 fixed w-full flex justify-center bg-white duration-500"
+          : "text-regal-blue z-40 fixed w-full flex justify-center duration-500 opacity-0 -mt-24"
       }
     >
       <nav className="container relative mx-auto flex xl:flex-row flex-col items-start px-10">
@@ -134,7 +157,7 @@ const Header = () => {
                         : "mx-3.5 font-bold px-2.5 2xl:text-xl text-lg py-1 rounded-none uppercase cursor-pointer text-regal-red"
                     }
                   >
-                    Выберите страну
+                    בחר מדינה
                   </h1>
                 }
                 on="hover"
